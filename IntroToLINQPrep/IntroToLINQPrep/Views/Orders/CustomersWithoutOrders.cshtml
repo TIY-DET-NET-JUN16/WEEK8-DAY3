@@ -1,0 +1,13 @@
+﻿@model IEnumerable<string>
+@{
+    ViewBag.Title = "CustomersWithoutOrders";
+}
+
+<h2>CustomersWithoutOrders</h2>
+
+<div style="width: 100%">
+    @Html.ListBox("lstEmail", new SelectList(Model))
+</div>
+
+
+

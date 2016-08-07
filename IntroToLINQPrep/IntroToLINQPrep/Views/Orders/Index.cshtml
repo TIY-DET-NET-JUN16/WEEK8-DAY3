@@ -1,0 +1,36 @@
+﻿@model IEnumerable<IntroToLINQPrep.Models.Order>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.FormattedOrderID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FormattedOrderDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FormattedShipDate)
+            </th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FormattedOrderID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FormattedOrderDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FormattedShipDate)
+                </td>
+            </tr>
+        }
+    </table>
